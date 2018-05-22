@@ -9,8 +9,13 @@ import {toDo} from './Containers/ToDo/action_reducer'
 
 import {staticMessage} from './Containers/StaticMessage/action_reducer'
 import {dynamicMessage} from './Containers/DynamicMessage/action_reducer'
+import {fetchData} from './Containers/FetchData/action_reducer'
 
 const init = {
+    fetchData:{
+        url: 'https://jsonplaceholder.typicode.com/users',
+        payloads: ['sdfsddf']
+    },
     toDo:{
         tasks: ['from index','index 2'],
         input: ''
@@ -21,13 +26,19 @@ const init = {
     dynamicMessage:{
         message: 'empty message'
     }
+    
 }
 
-// const store = createStore(ToDoReducer)
+// const init ={
+//     url: 'https://jsonplaceholder.typicode.com/posts',
+//         payloads: ['sdfsddf']
+// }
 
-const store = createStore(combineReducers({toDo, staticMessage, dynamicMessage}), init)
+// const store = createStore(dynamicMessage, init)
 
-console.log(store.getState())
+const store = createStore(combineReducers({toDo, staticMessage, dynamicMessage, fetchData}), init)
+
+// console.log(store.getState())
 
 ReactDOM.render(
     <Provider store={store}>
