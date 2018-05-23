@@ -8,7 +8,11 @@ const Constants =
 
     INPUT_MESSAGE       :       "INPUT_MESSAGE",
 
-    FETCH_DATA          :       "FETCH_DATA"
+    FETCH_DATA          :       "FETCH_DATA",
+    CLEAR_DATA          :       "CLEAR_DATA",
+
+    REDIRECT            :       "REDIRECT",
+    RESET_REDIRECT      :       "RESET_REDIRECT"
 }
 
 export default Constants

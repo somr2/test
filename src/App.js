@@ -1,25 +1,28 @@
 // @flow
 import React, { Component } from 'react';
 import './App.css';
-import ToDo from './Containers/ToDo'
-import StaticMessage from './Containers/StaticMessage'
-import DynamicMessage from './Containers/DynamicMessage'
-import FetchData from './Containers/FetchData'
 
-type Props = {}
-type State = {}
+import HeaderNav from './Containers/HeaderNav'
+import CoverPhoto from './Containers/CoverPhoto'
+import Product from './Containers/Product'
+import ProductListing from './Containers/ProductListing'
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component<Props, State> {
 
   render() {
     return (
       <div className="App">
-       
-        <ToDo />
-        <StaticMessage />
-        <DynamicMessage />
-        <FetchData />
-
+        <Router>
+          <div>
+           <Route path="/" component={HeaderNav} />
+           <Route exact path="/" component={CoverPhoto} />
+           <hr/>
+           <Route exact path="/" component={ProductListing} />
+           <Route exact path="/necklace/:item_id" component={Product} />
+          </div>
+        </Router>
       </div>
     );
   }
