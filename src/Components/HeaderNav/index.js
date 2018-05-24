@@ -7,7 +7,7 @@ const Container = styled.section`
     justify-content: flex-end;
 `
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
    display: flex;
    margin-right: 10rem;
 `

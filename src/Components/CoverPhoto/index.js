@@ -1,12 +1,23 @@
 import React from 'react'
-// import {test} from 'src/Components/HeaderNav/index.js'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+   display: block;
+`
+
+const Img = styled.img`
+   max-width: 100%;
+   height: auto;
+   display: block;
+`
 
 const CoverPhoto = ({photos}) => {
     return (
         <div>
-            {/* {test} */}
             {photos.map((photo, index) => (
-                <div key={index}>{photo}</div>
+                <Wrapper key={index}>
+                    <Img src={photo} alt="product"/>
+                </Wrapper>
             ))}
         </div>
     )

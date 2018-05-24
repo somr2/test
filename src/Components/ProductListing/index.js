@@ -1,5 +1,21 @@
 import React from 'react'
 import { Redirect } from "react-router-dom";
+import styled from 'styled-components'
+
+const Container = styled.section`
+    display: flex;
+    justify-content: space-around;
+`
+
+const Wrapper = styled.div`
+   display: block;
+`
+
+const Img = styled.img`
+   max-width: 100%;
+   height: auto;
+   display: block;
+`
 
 class ProductListing extends React.Component{
     componentWillUnmount(){
@@ -15,17 +31,13 @@ class ProductListing extends React.Component{
             return <Redirect push to={`/necklace/${whereTo}`} />;
         }
         return (
-            <div>
+            <Container>
                 {products.map((product,i)=>(
-                    <div key={i} onClick={() => onClick(product.id)}>
-                        <div>{product.name}</div>
-                        <div>{product.price}</div>
-                        <div>{product.material}</div>
-                        <div>{product.description}</div>
-                        <hr/>
-                    </div>
+                    <Wrapper key={i} onClick={() => onClick(product.id)}>
+                        <Img src={product.src} alt="product"/>
+                    </Wrapper>
                 ))}
-            </div>
+            </Container>
         )
     }
 }

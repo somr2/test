@@ -1,4 +1,5 @@
 import C from '../../Constants'
+import data from '../../TempAPI'
 
 const init = {
     id: '', 
@@ -11,14 +12,7 @@ const init = {
 
 export const actions = {
     fetchData:(dispatch,id) => {
-        let product
-        
-        if(id === '1'){
-            product = {id: 1, category: 'necklace', name: 'inifiity necklace', material: 'diamond', price: '1899', description: 'very goooooood'}
-        }
-        if(id === '2'){
-            product = {id: 2, category: 'ring', name: 'inifiity ring', material: 'silver', price: '1855599', description: 'very bad'}
-        }
+        let product = data[id-1]
         return dispatch({type: C.FETCH_DATA, product: {...product}})
     },
     clearData: dispatch => {

@@ -1,3 +1,12 @@
+import main from '../image/main.jpg'
+import second from '../image/second.jpg'
+import third from '../image/third.png'
+import item1 from '../image/item/1.jpg'
+import item2 from '../image/item/2.jpg'
+import item3 from '../image/item/3.jpg'
+import item4 from '../image/item/4.jpg'
+
+
 const init = {
     headerNav:{
         links: [{title: 'Home',         url: ''},
@@ -6,14 +15,15 @@ const init = {
                 {title: 'Contact Us',   url: 'contact'}]
     },
     coverPhoto:{
-        photos: ['img1', 'img2', 'img3']
+        photos: [main, second, third]
     },
     product:{id: 1, category: 'test', name: 'test', material: 'test', price: 'test', description: 'test'},
     productListing:{
         products:[
-            {id: 1, category: 'necklace', name: 'inifiity necklace', material: 'diamond', price: '1899', description: 'very goooooood'},
-            {id: 2, category: 'ring', name: 'inifiity ring', material: 'silver', price: '1855599', description: 'very bad'},
-            {id: 3, category: 'wrist', name: 'inifiity wrist', material: 'gold', price: '18995151', description: 'very soso'}
+            {id: 1, src: item1},
+            {id: 2, src: item2},
+            {id: 3, src: item3},
+            {id: 4, src: item4}
         ],
         redirect: false,
         whereTo: ''
