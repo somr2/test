@@ -1,13 +1,35 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import styled from 'styled-components'
+
+const Container = styled.section`
+    display: flex;
+    justify-content: flex-end;
+`
+
+const Wrapper = styled.section`
+   display: flex;
+   margin-right: 10rem;
+`
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    display: block;
+    padding: 1rem 2rem;
+    color: #777;
+`
 
 const HeaderNav = ({links}) => {
     return (
-        <ul>
-            {links.map((link, index)=>(
-                <li key={index}><Link to={`/${link.url}`}>{link.title}</Link></li>
-            ))}
-        </ul>
+        <Container>
+            <Wrapper>
+                {links.map((link, index)=>(
+                    <div key={index}>
+                        <StyledLink to={`/${link.url}`}>{link.title}</StyledLink>
+                    </div>
+                ))}
+            </Wrapper>
+        </Container>
     )
 }
 
