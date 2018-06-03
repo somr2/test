@@ -13,6 +13,16 @@ const Wrapper = styled.div`
    margin: auto;
 `
 
+/**
+ * Product component
+ * @param {int}    id
+ * @param {string} category
+ * @param {string} name
+ * @param {string} material
+ * @param {string} price
+ * @param {string} description
+ */
+
 class Product extends React.Component { 
     componentDidMount(){
 

@@ -19,6 +19,11 @@ const StyledLink = styled(Link)`
     color: #777;
 `
 
+/**
+ * Header navigation component
+ * @param {array} links 
+ */
+
 const HeaderNav = ({links}) => {
     return (
         <Container>

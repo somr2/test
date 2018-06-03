@@ -17,6 +17,15 @@ const Img = styled.img`
    display: block;
 `
 
+/**
+ * Product component
+ * @param {function} onClick
+ * @param {function} onRedirect
+ * @param {array}    products
+ * @param {boolean}  redirect
+ * @param {string}   whereTo
+ */
+
 class ProductListing extends React.Component{
     componentWillUnmount(){
         const {onRedirect} = this.props
@@ -27,7 +36,6 @@ class ProductListing extends React.Component{
         const {products, onClick, redirect, whereTo} = this.props
         console.log(redirect, whereTo)
         if (redirect) {
-            // console.log('redirect')
             return <Redirect push to={`/necklace/${whereTo}`} />;
         }
         return (

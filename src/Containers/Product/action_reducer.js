@@ -1,6 +1,7 @@
 import C from '../../Constants'
 import data from '../../TempAPI'
 
+// init state
 const init = {
     id: '', 
     category: '', 
@@ -10,6 +11,7 @@ const init = {
     description: ''
 }
 
+// actions
 export const actions = {
     fetchData:(dispatch,id) => {
         let product = data[id-1]
@@ -20,6 +22,7 @@ export const actions = {
     }
 }
 
+// reducer
 export const product = (state=init, action) => {
     switch (action.type){
         case C.FETCH_DATA:

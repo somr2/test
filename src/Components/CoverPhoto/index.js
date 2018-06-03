@@ -10,6 +10,10 @@ const Img = styled.img`
    height: auto;
    display: block;
 `
+/**
+ * Cover Photo Component
+ * @param {array} photos
+ */
 
 const CoverPhoto = ({photos}) => {
     return (

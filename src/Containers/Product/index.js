@@ -8,8 +8,6 @@ export default connect(
     }),
     dispatch => ({
         clearData: () => actions.clearData(dispatch),
-        fetchData: id => actions.fetchData(dispatch, id),
-        
+        fetchData: id => actions.fetchData(dispatch, id)
     })
-    
 )(Product)
